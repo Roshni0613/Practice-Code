@@ -1,0 +1,57 @@
+
+td,th{
+    border: 1px solid black;
+    padding: 0.7rem 0.7rem;
+  
+  }
+  
+  table{
+      margin: auto;
+      border-collapse: collapse;
+  }
+
+  section{
+    margin-left:20px;
+    margin-right: 20px;
+    display: inline;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+section img{
+    width: 250px;
+    height:150px;
+    object-fit: fill;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-left: 27px;
+
+}
+  .techBox span{
+      display: block;
+      text-align: center;
+  }
+
+  .techBox{
+    position: absolute;
+    bottom: -78px;
+    right: 20px;;
+    color:black;
+    font-weight:500;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .mainDiv{
+      margin: auto;
+      width: 80%;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-top: 5px;
+      padding-bottom: 100px;
+  }
+
+
+ 
+
+

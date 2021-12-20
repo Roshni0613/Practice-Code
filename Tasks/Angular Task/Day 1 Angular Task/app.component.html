@@ -1,0 +1,37 @@
+<div>
+   <h3 style="text-align: center;">~~~~Employee Details~~~~</h3>
+   <app-emp></app-emp>
+   <hr/>
+   <h3>~~~~~List of technologies~~~~~~</h3>
+    <span *ngFor="let t of arrayTechnologies">
+    {{t}},  
+    </span>
+    <hr>
+    <table>
+      <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+      </tr>
+      <tr *ngFor="let p of productArr">
+        <td>{{p.pid}}</td>
+        <td>{{p.pname}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+    </table>
+
+    <div class="mainDiv">
+    <section *ngFor="let t of techList">
+      <img src={{t.image}} alt="" >
+      <div class="techBox" >
+        <u><b><span>{{t.title}}</span></b></u>
+        <span>{{t.des}}</span>
+      </div>
+    </section>
+  </div>
+
+</div>

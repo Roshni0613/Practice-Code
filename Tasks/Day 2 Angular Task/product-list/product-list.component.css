@@ -1,0 +1,18 @@
+section{
+    margin-left: 70px;
+    padding: 0px;
+}
+.productDiv{
+        float: left;
+        height: 120px;
+        width: 200px;
+        margin: 25px;
+        padding: 0 10px;
+        border-radius: 8px;
+        border: 1px solid black;
+        box-shadow: 5px 10px #888888;
+}
+
+  .productDiv span{
+      display: block;
+  }

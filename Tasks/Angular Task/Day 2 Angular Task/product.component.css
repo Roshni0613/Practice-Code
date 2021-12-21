@@ -1,0 +1,30 @@
+input{
+    margin:10px 10px;
+}
+
+h3{
+    text-align: center;
+    margin-top: 0.9rem;
+}
+
+button{
+    margin: 1px;
+}
+section{
+    margin-left: 70px;
+    border:1px solid black;
+    padding: 0px;
+}
+.productDiv{
+        float: left;
+        height: 120px;
+        width: 200px;
+        margin: 25px;
+        padding: 0 10px;
+        border-radius: 8px;
+        border: 1px solid black;
+}
+
+  .productDiv span{
+      display: block;
+  }

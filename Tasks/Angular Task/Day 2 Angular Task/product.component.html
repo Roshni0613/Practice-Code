@@ -1,0 +1,67 @@
+<!--Product Addition Form-->
+<div style="text-align: center;">
+    <p>{{message}}</p>
+    <fieldset style="width: 30%;margin: auto;text-align: left;">
+      <legend>Add Product</legend>
+      Product ID : <input [disabled]="isDisabled" type="number" [(ngModel)]="pid">
+      <br/>
+      Product Name : <input type="text" [(ngModel)]="pname">
+      <br/>
+      Price : <input type="number" [(ngModel)]="price">
+      <br/>
+      Category : <input type="text" [(ngModel)]="category">
+      <br/>
+      Qunatity : <input type="number" [(ngModel)]="qty">
+      <br/>
+      <button style="margin-left:30px ;" (click)=addProduct_click()>Add Product</button>
+      <button  (click)=product_update()>Update Product</button>
+      <button  (click)=clearField()>Reset</button>
+    
+    </fieldset>
+    <h3 style="text-align: center;">~~~~All the Product Details~~~~</h3>
+    <section>
+        <div *ngFor="let p of productArr" class="productDiv"> 
+            <span>{{p.pid}}</span>
+            <span>{{p.pname}}</span>
+            <span> {{p.category}}</span>
+            <span> {{p.price}}/piece</span>
+            <span> Qty: {{p.qty}}</span>
+            <a href="javascript:void(0);" (click)=delete_click(p.pid)><img style="width: 20px;height: 20px;margin: 10px;" src="../assets/delete.png" alt="Delete"></a>
+            <a href="javascript:void(0);" (click)=select_click(p.pid)><img style="width: 20px;height: 20px;margin: 10px;" src="../assets/select.png" alt="Delete"></a>
+        </div>
+    </section>
+    <p *ngIf="productArr.length==0" style="text-align: center;color: red;">No Record Available</p>
+    </div>
+
+    <!-- <h3 style="text-align: center;">~~~~All Produc Details~~~~</h3>
+Product Table
+<div>
+  <table>
+    <tr>
+      <th>Product ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let p of productArr">
+      <td>{{p.pid}}</td>
+      <td>{{p.pname}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.category}}</td>
+      <td>{{p.qty}}</td>
+    </tr>
+  </table>
+</div> -->
+
+
+    <!-- List of technologies along with description task-->
+    <!-- <div class="mainDiv">
+    <section *ngFor="let t of techList">
+      <img src={{t.image}} alt="" >
+      <div class="techBox" >
+        <u><b><span>{{t.title}}</span></b></u>
+        <span>{{t.des}}</span>
+      </div>
+    </section>
+  </div> -->

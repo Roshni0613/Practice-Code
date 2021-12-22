@@ -1,0 +1,22 @@
+<div style="margin: auto;width:80%">
+<app-emp-sort-opt (sortBy)="sort_parent($event)"></app-emp-sort-opt>
+<app-emp-list [sortOption]="sortOption">  </app-emp-list>
+</div>
+
+
+<!--Product details besed on category-->
+
+<!-- <div style="text-align:center ;">
+  Select the Category: 
+  <select [(ngModel)]="selectedCategory">
+      <option>Electronics</option>
+      <option>Toys</option>
+      <option>Cosmestics</option>
+      <option>Clothing</option>
+      <option>Fitness Product</option>
+      <option>Food Products</option>
+      <option value=""> All Products</option>
+  </select>
+  <br/>
+</div>
+<app-product-list [category]="selectedCategory"></app-product-list> -->

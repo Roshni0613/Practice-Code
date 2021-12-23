@@ -1,0 +1,17 @@
+<h3 style="text-align: center;"><i>Employee Performance Details </i></h3>
+<hr>
+<table>
+    <tr>
+        <th>Sr No.</th>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Performance</th>
+        
+    </tr>
+    <tr *ngFor="let emp of empData;let i=index;">
+        <td>{{i+1}}</td>
+        <td>{{emp.empno}}</td>
+        <td>{{emp.ename | titlecase}}</td>
+        <td>{{emp.performance | grade}}</td>
+    </tr>
+</table>

@@ -1,0 +1,19 @@
+
+<h3><i>Employee Details</i></h3>
+    <hr>
+<div style="width: 90%;margin: auto;">
+    <div *ngFor="let e of empData| slice : start :end " class="empDiv"> 
+        <span><u><b style="color:white;">{{e.ename}}</b></u></span>
+        <span>ID:{{e.empno}}</span>
+        <span>Designation:{{e.job}}</span>
+        <span> Salary:{{e.sal}}</span>
+        <span> Department No: {{e.deptno}}</span>
+    </div>
+</div>
+<br>
+<div style="clear: both;text-align: center;">
+    <a *ngIf="!isVisible" href="javascript:void(0)"  (click)="start=0;end=4;isVisible=true" >Back to Start </a>
+    <a *ngIf="isVisible"  href="javascript:void(0)" (click)="loadMore_click()" >Load More </a>
+</div>
+
+    

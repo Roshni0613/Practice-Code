@@ -1,0 +1,10 @@
+<h3 style="text-align: center;">Employee's Details</h3>
+<button (click)="getData_click()">Get Data</button>
+<hr>
+<section>
+    <div *ngFor="let e of empArr" class="empDiv"> 
+        <img  style ="border-radius: 75px;margin:10px;height: 150px;"src={{e.avatar}} alt="no image">
+        <span style="font-weight: bold;">{{e.first_name}} {{e.last_name}} </span>
+        <span style ="color:blue;text-decoration: underline;"> {{e.email}}</span>
+    </div>
+</section>

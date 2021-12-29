@@ -1,0 +1,67 @@
+<!--Product Addition Form-->
+<div style="text-align: center;">
+    <fieldset style="width: 30%;margin: auto;text-align: left;">
+      <legend>Add Product</legend>
+      Product ID : <input [disabled]="isDisabled" type="number" [(ngModel)]="pid">
+      <br/>
+      Product Name : <input type="text" [(ngModel)]="pname">
+      <br/>
+      Price : <input type="number" [(ngModel)]="price">
+      <br/>
+      Category : <input type="text" [(ngModel)]="category">
+      <br/>
+      Qunatity : <input type="number" [(ngModel)]="qty">
+      <br/>
+      Select the Category:
+      <select [(ngModel)]="selectedCategory">
+          <option value="">All</option>
+          <option>Electronics</option>
+          <option>Toys</option>
+          <option>Cosmetics</option>
+          <option>Clothing</option>
+          <option>Food Product</option>
+      </select>
+     <br>
+      <button style="margin-left:10px ;margin-top: 10px;" (click)="getProduct_click()">Get Products</button>
+      <button  (click)=addProduct_click()>Add Product</button>
+      <button  (click)=product_update()>Update Product</button>
+      <button  (click)=clearField()>Reset</button>
+    
+    </fieldset>
+    <div>
+    <h3 style="text-align: center;">~~~~All the Product Details~~~~</h3>
+    <section>
+        <div *ngFor="let p of productArr" class="productDiv"> 
+            <span style="text-decoration: underline;font-weight: bold;">ID:{{p.pid}}</span>
+            <span>{{p.pname}}</span>
+            <span> {{p.category}}</span>
+            <span> {{p.price}}/piece</span>
+            <span> Qty: {{p.qty}}</span>
+            <a href="javascript:void(0);" (click)=delete_click(p.pid)><img style="width: 20px;height: 20px;margin: 10px;" src="../assets/delete.png" alt="Delete"></a>
+            <a href="javascript:void(0);" (click)=select_click(p.pid)><img style="width: 20px;height: 20px;margin: 10px;" src="../assets/select.png" alt="Select"></a>
+        </div>
+    </section>
+    <p *ngIf="productArr.length==0" style="text-align: center;color: red;">No Record Available</p>
+    </div>
+    <div style="clear: both;">
+        <button  style="margin-left: 50px;" (click)=listOfCategory_click()>List of Category</button>
+      <br>
+          <ul style="margin-left: 50px;list-style-position: inside;" >
+              <li *ngFor="let item of listOfCategory" style="text-align: left;margin-left: 450px;">
+                  {{item}}
+              </li>
+          </ul>
+        <br>
+        <button  (click)=productNameAndPrice_click()>Product Name & Price</button>
+        <table style="border-collapse: collapse;margin-left: 550px;margin-top: 10px;">
+            <tr *ngFor="let p of productNameAndPrice" style="border:1px solid black">
+                <td>{{p.pname}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+        
+    </div>
+    

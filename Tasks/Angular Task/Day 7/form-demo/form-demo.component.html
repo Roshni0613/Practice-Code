@@ -1,0 +1,46 @@
+<form [formGroup]="vehicleForm" (submit)="submit_click()">
+<fieldset>
+    <legend>Vehicle Registeration Form</legend>
+    Onwer Name<sup>*</sup> : <input type="text" formControlName="oName">
+    <span *ngIf="vehicleForm.controls['oName'].invalid && vehicleForm.controls['oName'].dirty" class="error">Onwer Name is required</span>
+    <br><br>
+    Contact Number<sup>*</sup> : <input type="number" formControlName="contactNo">
+    <span *ngIf="vehicleForm.controls['contactNo'].invalid && vehicleForm.controls['contactNo'].dirty" class="error">Invalid Contact Number</span>
+    <br><br>
+    Email<sup>*</sup> : <input type="email" formControlName="oEmail">
+    <span *ngIf="vehicleForm.controls['oEmail'].invalid && vehicleForm.controls['oEmail'].dirty" class="error">Invalid email id</span>
+    <br><br>
+    Vehicle Registeration Number<sup>*</sup> : <input type="text" formControlName="vehicleRegNo">
+    <span *ngIf="vehicleForm.controls['vehicleRegNo'].invalid && vehicleForm.controls['vehicleRegNo'].dirty" class="error">Invalid Vehicle Number</span>
+    <br><br>
+    Address<sup>*</sup> : <textarea formControlName="address" cols="30" rows="10"></textarea>
+    <span *ngIf="vehicleForm.controls['address'].invalid && vehicleForm.controls['address'].dirty" class="error">Mandatory Field.Minimum 5 character</span>
+    <br><br>
+    Model<sup>*</sup> : <input type="text" formControlName="model">
+    <span *ngIf="vehicleForm.controls['model'].invalid && vehicleForm.controls['model'].dirty" class="error">Mandatory Field.Maximum 10 characters only </span>
+    <br><br>
+    Color<sup>*</sup> : <input type="color" formControlName="color">
+    <span *ngIf="vehicleForm.controls['color'].invalid && vehicleForm.controls['color'].dirty" class="error">Mandatory Field</span>
+    <br><br>
+    Year<sup>*</sup> :
+    <select formControlName="year" > 
+        <option></option>
+        <option >2012</option>
+        <option>2013</option>
+        <option>2014</option>
+        <option>2015</option>
+        <option>2016</option>
+        <option>2017</option>
+        <option>2018</option>
+        <option>2018</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+    </select>
+    <span *ngIf="vehicleForm.controls['year'].invalid && vehicleForm.controls['year'].dirty" class="error">Select one of the year</span>
+
+    <br><br>
+    <button [disabled]="vehicleForm.invalid">Register</button>
+
+</fieldset>
+</form>

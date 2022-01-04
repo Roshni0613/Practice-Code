@@ -1,0 +1,22 @@
+
+<div style="text-align: center;">
+
+    <fieldset style="width: 30%;margin: auto;text-align: left;">
+      <legend>Calculate Total</legend>
+      Product Name : <input type="text" [(ngModel)]="pname">
+      <br/>
+      Unit Price : <input type="number" [(ngModel)]="unitPrice">
+      <br/>
+      Qunatity : <input type="number" [(ngModel)]="qty">
+      <br/>
+      <div style="padding-left: 100px;">
+      <button  (click)=getTotalAmount()>Get Total</button>
+      <button  (click)=clearField()>Reset</button>
+      
+     </div>
+     <p *ngIf="isVisible">Total Amount : {{result}}</p>
+    </fieldset>
+    
+    </div>
+
+ 
